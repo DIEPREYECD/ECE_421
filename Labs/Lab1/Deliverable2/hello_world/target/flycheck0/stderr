@@ -1,58 +1,12 @@
-   0.060864000s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint: fingerprint error for hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world)/Check { test: false }/TargetInner { name: "hello_world", doc: true, ..: with_path("C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs", Edition2024) }
-   0.060930200s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world\target\debug\.fingerprint\hello_world-eecaa40a3ce96819\bin-hello_world`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
-   0.086530100s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint: fingerprint error for hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world)/Check { test: true }/TargetInner { name: "hello_world", doc: true, ..: with_path("C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs", Edition2024) }
-   0.086585300s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world\target\debug\.fingerprint\hello_world-b8c6868c945bbd0f\test-bin-hello_world`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
+   0.067114900s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs"
+   0.067179800s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\target\\debug\\.fingerprint\\hello_world-eecaa40a3ce96819\\dep-bin-hello_world"
+   0.067188700s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13412811764, nanos: 885607900 } < FileTime { seconds: 13412814223, nanos: 363354400 }
+   0.067952400s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint: fingerprint dirty for hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world)/Check { test: false }/TargetInner { name: "hello_world", doc: true, ..: with_path("C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs", Edition2024) }
+   0.068028500s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\target\\debug\\.fingerprint\\hello_world-eecaa40a3ce96819\\dep-bin-hello_world", reference_mtime: FileTime { seconds: 13412811764, nanos: 885607900 }, stale: "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs", stale_mtime: FileTime { seconds: 13412814223, nanos: 363354400 } }))
+   0.085801500s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs"
+   0.085848000s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\target\\debug\\.fingerprint\\hello_world-b8c6868c945bbd0f\\dep-test-bin-hello_world"
+   0.085856000s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13412811764, nanos: 885607900 } < FileTime { seconds: 13412814223, nanos: 363354400 }
+   0.086551700s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint: fingerprint dirty for hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world)/Check { test: true }/TargetInner { name: "hello_world", doc: true, ..: with_path("C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs", Edition2024) }
+   0.086606300s  INFO prepare_target{force=false package_id=hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world) target="hello_world"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\target\\debug\\.fingerprint\\hello_world-b8c6868c945bbd0f\\dep-test-bin-hello_world", reference_mtime: FileTime { seconds: 13412811764, nanos: 885607900 }, stale: "C:\\Users\\USER\\Documents\\ECE_421\\Labs\\Lab1\\Deliverable2\\hello_world\\src\\main.rs", stale_mtime: FileTime { seconds: 13412814223, nanos: 363354400 } }))
     Checking hello_world v0.1.0 (C:\Users\USER\Documents\ECE_421\Labs\Lab1\Deliverable2\hello_world)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.28s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.35s
