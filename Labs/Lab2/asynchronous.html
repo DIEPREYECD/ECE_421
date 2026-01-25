@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Test Suite</title>
+    <script>
+      (function () {
+        var queue = [],
+          paused = false,
+          results;
+
+        this.test = function (name, fn) {
+          queue.push(function () {
+            results = document.getElementById("results");
+            results = assert(true, name).appendChild(
+              document.createElement("ul"),
+            );
+            fn();
+          });
+          runTest();
+        };
+
+        this.pause = function () {
+          paused = true;
+        };
+
+        this.resume = function () {
+          paused = false;
+          setTimeout(runTest, 1);
+        };
+
+        function runTest() {
+          if (!paused && queue.length) {
+            queue.shift()();
+            if (!paused) {
+              resume();
+            }
+          }
+        }
+
+        this.assert = function assert(value, desc) {
+          var li = document.createElement("li");
+          li.className = value ? "pass" : "fail";
+          li.appendChild(document.createTextNode(desc));
+          results.appendChild(li);
+          if (!value) {
+            li.parentNode.parentNode.className = "fail";
+          }
+          return li;
+        };
+      })();
+
+      window.onload = function () {
+        test("Async Test #1", function () {
+          pause();
+          setTimeout(function () {
+            assert(true, "First test completed");
+            resume();
+          }, 1000);
+        });
+
+        test("Async Test #2", function () {
+          pause();
+          setTimeout(function () {
+            assert(false, "Second test failed");
+            resume();
+          }, 500);
+        });
+      };
+
+      function animateIt(elementId) {
+        var elem = document.getElementById(elementId);
+        var tick = 0;
+        var timer = setInterval(function () {
+          if (tick < 100) {
+            elem.style.left = elem.style.top = tick + "px";
+            tick++;
+          } else {
+            clearInterval(timer);
+            assert(true, "Animation completed for " + elementId);
+          }
+        }, 10);
+      }
+    </script>
+    <style>
+      #results li.pass {
+        color: green;
+      }
+      #results li.fail {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="results"></ul>
+    <div id="test-box" style="position: relative;">Test-Element</div>
+    <button
+      onclick="
+        test('Animate Box Test', function () {
+          pause();
+          setTimeout(function () {
+            animateIt('test-box');
+            resume();
+          }, 0);
+        })
+      "
+    >
+      Animate Box
+    </button>
+  </body>
+</html>
