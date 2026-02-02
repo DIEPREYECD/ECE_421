@@ -4,3 +4,6 @@
 [submodule "poker-project-pokerdud"]
 	path = poker-project-pokerdud
 	url = git@github.com-school:ece421-2026/poker-project-pokerdud.git
+[submodule "assignment-2-DIEPREYECD"]
+	path = assignment-2-DIEPREYECD
+	url = git@github.com-school:ece421-2026/assignment-2-DIEPREYECD.git
